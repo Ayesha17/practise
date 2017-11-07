@@ -1,14 +1,63 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar  >
     <ion-title>
-      Ionic Blank
+      Practise
     </ion-title>
   </ion-navbar>
 </ion-header>
+  
+<ion-content  id="body"> 
+    <!-- <div class="top" padding >  
+          <img src="http://ca.risknucleus.com/portal/images/logo360.png"  style="
+          margin: auto;
+          display: block;"/>
+        
+        <!-- <h1 id="title" class="hidden"><span id="logo">Daily <span>UI</span></span></h1> -->
+     <!-- </div> --> 
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <div class="container" padding  >
+        
+        <div class="login-box animated fadeInUp"  >
+          <div class="box-header">
+            <h2>Log In</h2>
+          </div>
+          <form (ngSubmit)="login()">
+
+                 
+          <ion-item >
+              <ion-label color="primary" floating>Username</ion-label>
+              <ion-input type="text" value=""  [(ngModel)]="userData.email"  name="email"></ion-input>
+            </ion-item>
+            <ion-item >
+                <ion-label color="primary" floating>Password</ion-label> 
+                <ion-input type="password" value=""  [(ngModel)]="userData.pwd"  name="pwd"></ion-input>
+              </ion-item> 
+
+                  <ion-item class="selector"  >
+                    <ion-label >Url</ion-label>
+                    <ion-select [(ngModel)]="url" name="url" >
+                      <ion-option >Local</ion-option>
+                      <ion-option checked="true">Server</ion-option>
+                 
+                    </ion-select>
+                  </ion-item>
+                 
+                          <br/>
+              <button ion-button round outline color="primary" type="submit"     >Sign In</button> 
+        
+          <br/>
+          <a href="#"><p class="small">Forgot your password?</p></a>
+          <a href="#"><p class="small">New User? Create an Account</p></a>
+
+          </form>
+        </div>
+        
+      </div>
+  
 </ion-content>
